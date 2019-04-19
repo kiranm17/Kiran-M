@@ -1,0 +1,149 @@
+1)
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# data to plot
+n_groups = 5
+men_scores = (22, 30, 33, 30, 26)
+
+
+# create plot
+fig, ax = plt.subplots()
+index = np.arange(n_groups)
+bar_width = 0.35
+Transparency = 1
+
+rects1 = plt.bar(index, men_scores, bar_width,
+alpha=Transparency,
+color='r',
+label='Men')
+
+
+plt.xlabel('Person')
+plt.ylabel('Scores')
+plt.title('Scores by person')
+plt.xticks(index , ('Kohli', 'Parthiv Patel', 'ABd', 'Moeen Ali', 'Pawan Negi'))
+plt.legend()
+
+plt.tight_layout()
+plt.show()
+
+import matplotlib.pyplot as plt
+ 
+# Data to plot
+labels = 'Kohli', 'ABd', 'Parthiv Patel', 'Moeen Ali' , 'Pawan Negi'
+sizes = [22, 30, 33, 30, 26]
+colors = ['gold', 'yellowgreen', 'lightcoral', 'lightskyblue', 'red']
+explode = (0.1, 0, 0, 0, 0)  # explode 1st slice
+ 
+# Plot
+plt.pie(sizes, explode=explode, labels=labels, colors=colors,
+autopct='%1.1f%%', shadow=True, startangle=140)
+ 
+plt.axis('equal')
+plt.show()
+
+
+2)
+
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Apr 10 01:37:35 2019
+
+@author: CSC
+"""
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+x = np.outer(np.linspace(-2, 2, 30), np.ones(30))
+y = x.copy().T
+z = np.cos(x ** 2 + y ** 2)
+
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+
+ax.plot_surface(x, y, z, cmap=plt.cm.jet, rstride=1, cstride=1, linewidth=0)
+
+
+
+3)
+
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits import mplot3d
+
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+zline = np.linspace(0, 15, 1000)
+xline = np.sin(zline)
+yline = np.cos(zline)
+ax.plot3D(xline, yline, zline, 'gray')
+zdata = 15 * np.random.random(100)
+xdata = np.sin(zdata) + 0.1 * np.random.randn(100)
+ydata = np.cos(zdata) + 0.1 * np.random.randn(100)
+ax.scatter3D(xdata, ydata, zdata, c=zdata, cmap='Greens');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4), 5), 6)
+
+
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Apr 20 01:19:02 2019
+
+@author: CSC
+"""
+
+import os 
+  
+# importing io from skimage 
+import skimage as sk
+from skimage import io 
+import numpy as np
+import matplotlib.pyplot as py
+import cv2
+  
+# way to load image from file 
+file = os.path.join(skimage.data_dir,r"C:\Users\CSC\Desktop\test.jpg") 
+  
+  
+img = io.imread(file) 
+  
+# way to show the input image 
+io.imshow(img) 
+io.show() 
+gray = sk.color.rgb2gray(img)
+py.imshow(gray, cmap = 'gray')
+io.imshow(gray) 
+io.show() 
+
+
+# to plot histogram
+plt.hist(img.ravel(), bins=32)
+plt.show()
+
+# to plot 3D histogram map 
+color = ('b','g','r')
+for channel,col in enumerate(color):
+    histr = cv2.calcHist([img],[channel],None,[256],[0,256])
+    plt.plot(histr,color = col)
+    plt.xlim([0,256])
+plt.title('Histogram for color scale picture')
+plt.show()
+
+
