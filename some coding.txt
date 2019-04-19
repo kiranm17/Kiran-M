@@ -1,0 +1,24 @@
+For Kiran*****
+
+So far you have plotted graph of equation and points
+ 
+
+1.write python code to plot the bar graph and pie chart of scores from yesterday match. players and their scores. 
+
+
+2. plot a 3D surface graph for a hemisphere. 4 different halves of semisphere
+
+
+3.generate 3D normal random points and plot in a 3D graph
+
+
+4. Read an image and convert to gray scale
+
+
+5. find the histogram of image and plot it
+
+
+6. Plot the 3D RGB histogram map of a given colored image
+
+**********end***********
+
