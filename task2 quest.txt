@@ -1,0 +1,7 @@
+Task2 for Kiran: 
+
+2A) read a rgb pic and convert to grayscale and draw 2 vertical and 2 horizontal lines on it and save the output pic to new folder. 
+
+2B) read a rgb pic and draw one red line, blue line and green line both vertically and horizontally and save the pic. 
+
+2C) Draw bounding boxes in the image
